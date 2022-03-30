@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1315DF2984B311F728CFB9DF /* Pods_ChallengeSkillLevelingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D38D2B0815748BDD0E0970 /* Pods_ChallengeSkillLevelingTests.framework */; };
+		A9D4671227F403B7009DCF5B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4671127F403B7009DCF5B /* Service.swift */; };
+		A9D4671427F403FA009DCF5B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4671327F403FA009DCF5B /* Category.swift */; };
+		A9D4671627F4AB72009DCF5B /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4671527F4AB72009DCF5B /* Attributes.swift */; };
+		A9D4671927F4ACA2009DCF5B /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4671827F4ACA2009DCF5B /* CategoryViewModel.swift */; };
 		A9F0246527F22D7800B7A4AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0246427F22D7800B7A4AB /* AppDelegate.swift */; };
 		A9F0246727F22D7800B7A4AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0246627F22D7800B7A4AB /* SceneDelegate.swift */; };
 		A9F0246E27F22D7A00B7A4AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9F0246D27F22D7A00B7A4AB /* Assets.xcassets */; };
@@ -20,6 +25,8 @@
 		A9F024A127F24FEA00B7A4AB /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9F0249F27F24FEA00B7A4AB /* ProductDetailViewController.xib */; };
 		A9F024AA27F27F0800B7A4AB /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F024A827F27F0800B7A4AB /* CustomTableViewCell.swift */; };
 		A9F024AB27F27F0800B7A4AB /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9F024A927F27F0800B7A4AB /* CustomTableViewCell.xib */; };
+		AE237EED3C0A5BB39BE01CF9 /* Pods_ChallengeSkillLeveling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C985DFF3A14F5D2796DAE86 /* Pods_ChallengeSkillLeveling.framework */; };
+		D715647B717516E47B574F19 /* Pods_ChallengeSkillLeveling_ChallengeSkillLevelingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E1C337007410560783A594 /* Pods_ChallengeSkillLeveling_ChallengeSkillLevelingUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +47,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0155F861672F45E462A19177 /* Pods-ChallengeSkillLevelingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeSkillLevelingTests.release.xcconfig"; path = "Target Support Files/Pods-ChallengeSkillLevelingTests/Pods-ChallengeSkillLevelingTests.release.xcconfig"; sourceTree = "<group>"; };
+		1C5643EAF5C81CE87F404694 /* Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests.release.xcconfig"; path = "Target Support Files/Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests/Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1C985DFF3A14F5D2796DAE86 /* Pods_ChallengeSkillLeveling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeSkillLeveling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29C0CB9CB47CBAB96A54BFD1 /* Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests/Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		34AB2E44BC9213799EDC1CE7 /* Pods-ChallengeSkillLevelingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeSkillLevelingTests.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeSkillLevelingTests/Pods-ChallengeSkillLevelingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4904E5C1FEF9DEDE20FC3A2B /* Pods-ChallengeSkillLeveling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeSkillLeveling.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeSkillLeveling/Pods-ChallengeSkillLeveling.debug.xcconfig"; sourceTree = "<group>"; };
+		A9D4671127F403B7009DCF5B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		A9D4671327F403FA009DCF5B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		A9D4671527F4AB72009DCF5B /* Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
+		A9D4671827F4ACA2009DCF5B /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		A9F0246127F22D7800B7A4AB /* ChallengeSkillLeveling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeSkillLeveling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F0246427F22D7800B7A4AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9F0246627F22D7800B7A4AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +74,9 @@
 		A9F0249F27F24FEA00B7A4AB /* ProductDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailViewController.xib; sourceTree = "<group>"; };
 		A9F024A827F27F0800B7A4AB /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		A9F024A927F27F0800B7A4AB /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		E8B3E557553750ED5DEDAFB4 /* Pods-ChallengeSkillLeveling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeSkillLeveling.release.xcconfig"; path = "Target Support Files/Pods-ChallengeSkillLeveling/Pods-ChallengeSkillLeveling.release.xcconfig"; sourceTree = "<group>"; };
+		F0D38D2B0815748BDD0E0970 /* Pods_ChallengeSkillLevelingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeSkillLevelingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4E1C337007410560783A594 /* Pods_ChallengeSkillLeveling_ChallengeSkillLevelingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeSkillLeveling_ChallengeSkillLevelingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE237EED3C0A5BB39BE01CF9 /* Pods_ChallengeSkillLeveling.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1315DF2984B311F728CFB9DF /* Pods_ChallengeSkillLevelingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +100,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D715647B717516E47B574F19 /* Pods_ChallengeSkillLeveling_ChallengeSkillLevelingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4576817704F55E5976006BAE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4904E5C1FEF9DEDE20FC3A2B /* Pods-ChallengeSkillLeveling.debug.xcconfig */,
+				E8B3E557553750ED5DEDAFB4 /* Pods-ChallengeSkillLeveling.release.xcconfig */,
+				29C0CB9CB47CBAB96A54BFD1 /* Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests.debug.xcconfig */,
+				1C5643EAF5C81CE87F404694 /* Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests.release.xcconfig */,
+				34AB2E44BC9213799EDC1CE7 /* Pods-ChallengeSkillLevelingTests.debug.xcconfig */,
+				0155F861672F45E462A19177 /* Pods-ChallengeSkillLevelingTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A9D4671727F4AC96009DCF5B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A9D4671827F4ACA2009DCF5B /* CategoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		A9F0245827F22D7800B7A4AB = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +135,8 @@
 				A9F0247A27F22D7A00B7A4AB /* ChallengeSkillLevelingTests */,
 				A9F0248427F22D7A00B7A4AB /* ChallengeSkillLevelingUITests */,
 				A9F0246227F22D7800B7A4AB /* Products */,
+				4576817704F55E5976006BAE /* Pods */,
+				DA0AECFA422B4F2DDF5CDDB7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,7 +153,7 @@
 		A9F0246327F22D7800B7A4AB /* ChallengeSkillLeveling */ = {
 			isa = PBXGroup;
 			children = (
-				A9F024A227F2525F00B7A4AB /* Cell */,
+				A9D4671727F4AC96009DCF5B /* ViewModel */,
 				A9F0249B27F23B7600B7A4AB /* Controller */,
 				A9F0249A27F23B6F00B7A4AB /* View */,
 				A9F0249927F23B6700B7A4AB /* Model */,
@@ -116,6 +162,7 @@
 				A9F0246D27F22D7A00B7A4AB /* Assets.xcassets */,
 				A9F0246F27F22D7A00B7A4AB /* LaunchScreen.storyboard */,
 				A9F0247227F22D7A00B7A4AB /* Info.plist */,
+				A9D4671127F403B7009DCF5B /* Service.swift */,
 			);
 			path = ChallengeSkillLeveling;
 			sourceTree = "<group>";
@@ -140,6 +187,8 @@
 		A9F0249927F23B6700B7A4AB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A9D4671327F403FA009DCF5B /* Category.swift */,
+				A9D4671527F4AB72009DCF5B /* Attributes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,6 +198,7 @@
 			children = (
 				A9F0249527F2347E00B7A4AB /* SearchScreenViewController.xib */,
 				A9F0249F27F24FEA00B7A4AB /* ProductDetailViewController.xib */,
+				A9F024A227F2525F00B7A4AB /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,6 +221,16 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		DA0AECFA422B4F2DDF5CDDB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C985DFF3A14F5D2796DAE86 /* Pods_ChallengeSkillLeveling.framework */,
+				F4E1C337007410560783A594 /* Pods_ChallengeSkillLeveling_ChallengeSkillLevelingUITests.framework */,
+				F0D38D2B0815748BDD0E0970 /* Pods_ChallengeSkillLevelingTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9F0248B27F22D7A00B7A4AB /* Build configuration list for PBXNativeTarget "ChallengeSkillLeveling" */;
 			buildPhases = (
+				45BBE9665C738D436F7A774D /* [CP] Check Pods Manifest.lock */,
 				A9F0245D27F22D7800B7A4AB /* Sources */,
 				A9F0245E27F22D7800B7A4AB /* Frameworks */,
 				A9F0245F27F22D7800B7A4AB /* Resources */,
+				E5D0971D5A91C739087709D0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,6 +257,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9F0248E27F22D7A00B7A4AB /* Build configuration list for PBXNativeTarget "ChallengeSkillLevelingTests" */;
 			buildPhases = (
+				58589EDE45F96B13EA90FB21 /* [CP] Check Pods Manifest.lock */,
 				A9F0247327F22D7A00B7A4AB /* Sources */,
 				A9F0247427F22D7A00B7A4AB /* Frameworks */,
 				A9F0247527F22D7A00B7A4AB /* Resources */,
@@ -213,9 +276,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9F0249127F22D7A00B7A4AB /* Build configuration list for PBXNativeTarget "ChallengeSkillLevelingUITests" */;
 			buildPhases = (
+				9435C97856C3F8280E3C3A54 /* [CP] Check Pods Manifest.lock */,
 				A9F0247D27F22D7A00B7A4AB /* Sources */,
 				A9F0247E27F22D7A00B7A4AB /* Frameworks */,
 				A9F0247F27F22D7A00B7A4AB /* Resources */,
+				A29799DAA32F787653CEA6B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -299,6 +364,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		45BBE9665C738D436F7A774D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChallengeSkillLeveling-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58589EDE45F96B13EA90FB21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChallengeSkillLevelingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9435C97856C3F8280E3C3A54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A29799DAA32F787653CEA6B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests/Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests/Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests/Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5D0971D5A91C739087709D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChallengeSkillLeveling/Pods-ChallengeSkillLeveling-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChallengeSkillLeveling/Pods-ChallengeSkillLeveling-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChallengeSkillLeveling/Pods-ChallengeSkillLeveling-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A9F0245D27F22D7800B7A4AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -306,9 +474,13 @@
 			files = (
 				A9F024AA27F27F0800B7A4AB /* CustomTableViewCell.swift in Sources */,
 				A9F0249627F2347E00B7A4AB /* SearchScreenViewController.swift in Sources */,
+				A9D4671627F4AB72009DCF5B /* Attributes.swift in Sources */,
 				A9F024A027F24FEA00B7A4AB /* ProductDetailViewController.swift in Sources */,
 				A9F0246527F22D7800B7A4AB /* AppDelegate.swift in Sources */,
+				A9D4671227F403B7009DCF5B /* Service.swift in Sources */,
 				A9F0246727F22D7800B7A4AB /* SceneDelegate.swift in Sources */,
+				A9D4671927F4ACA2009DCF5B /* CategoryViewModel.swift in Sources */,
+				A9D4671427F403FA009DCF5B /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +646,7 @@
 		};
 		A9F0248C27F22D7A00B7A4AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4904E5C1FEF9DEDE20FC3A2B /* Pods-ChallengeSkillLeveling.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -503,6 +676,7 @@
 		};
 		A9F0248D27F22D7A00B7A4AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8B3E557553750ED5DEDAFB4 /* Pods-ChallengeSkillLeveling.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -532,6 +706,7 @@
 		};
 		A9F0248F27F22D7A00B7A4AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34AB2E44BC9213799EDC1CE7 /* Pods-ChallengeSkillLevelingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -552,6 +727,7 @@
 		};
 		A9F0249027F22D7A00B7A4AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0155F861672F45E462A19177 /* Pods-ChallengeSkillLevelingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -572,6 +748,7 @@
 		};
 		A9F0249227F22D7A00B7A4AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29C0CB9CB47CBAB96A54BFD1 /* Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -590,6 +767,7 @@
 		};
 		A9F0249327F22D7A00B7A4AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C5643EAF5C81CE87F404694 /* Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
