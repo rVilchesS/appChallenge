@@ -4,6 +4,8 @@ import Alamofire
 class CategoryViewModel {
         
     let apiClient = AlamofireAPIClient()
+//    weak var vc: SearchScreenViewController?
+    var arrCategory = [Category]()
     
     func getCategoryData(categorySearch: String? = nil, completion: @escaping (Category) -> Void){
         
@@ -19,7 +21,14 @@ class CategoryViewModel {
                 do {
                     if let data = data {
                         let decod = try JSONDecoder().decode([Category].self, from: data)
-                        print(decod)
+                        
+                        for modelCategory in decod {
+                            self.arrCategory.append(modelCategory)
+                            completion(modelCategory)
+                        }
+//                        print(self.arrCategory)
+//                        self.arrCategory.append(contentsOf: decod)
+//                        print(decod)
                     }
                 } catch let err {
                     print("Error: \(err.localizedDescription)")

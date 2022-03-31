@@ -12,6 +12,9 @@
 		A9D4671427F403FA009DCF5B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4671327F403FA009DCF5B /* Category.swift */; };
 		A9D4671627F4AB72009DCF5B /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4671527F4AB72009DCF5B /* Attributes.swift */; };
 		A9D4671927F4ACA2009DCF5B /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4671827F4ACA2009DCF5B /* CategoryViewModel.swift */; };
+		A9D4671B27F629A8009DCF5B /* BestSellersCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4671A27F629A8009DCF5B /* BestSellersCategory.swift */; };
+		A9D4671D27F629D9009DCF5B /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4671C27F629D9009DCF5B /* Content.swift */; };
+		A9D4671F27F629FE009DCF5B /* Query_data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4671E27F629FE009DCF5B /* Query_data.swift */; };
 		A9F0246527F22D7800B7A4AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0246427F22D7800B7A4AB /* AppDelegate.swift */; };
 		A9F0246727F22D7800B7A4AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0246627F22D7800B7A4AB /* SceneDelegate.swift */; };
 		A9F0246E27F22D7A00B7A4AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9F0246D27F22D7A00B7A4AB /* Assets.xcassets */; };
@@ -57,6 +60,9 @@
 		A9D4671327F403FA009DCF5B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A9D4671527F4AB72009DCF5B /* Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
 		A9D4671827F4ACA2009DCF5B /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		A9D4671A27F629A8009DCF5B /* BestSellersCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellersCategory.swift; sourceTree = "<group>"; };
+		A9D4671C27F629D9009DCF5B /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		A9D4671E27F629FE009DCF5B /* Query_data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query_data.swift; sourceTree = "<group>"; };
 		A9F0246127F22D7800B7A4AB /* ChallengeSkillLeveling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeSkillLeveling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F0246427F22D7800B7A4AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9F0246627F22D7800B7A4AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +195,9 @@
 			children = (
 				A9D4671327F403FA009DCF5B /* Category.swift */,
 				A9D4671527F4AB72009DCF5B /* Attributes.swift */,
+				A9D4671A27F629A8009DCF5B /* BestSellersCategory.swift */,
+				A9D4671C27F629D9009DCF5B /* Content.swift */,
+				A9D4671E27F629FE009DCF5B /* Query_data.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -474,10 +483,13 @@
 			files = (
 				A9F024AA27F27F0800B7A4AB /* CustomTableViewCell.swift in Sources */,
 				A9F0249627F2347E00B7A4AB /* SearchScreenViewController.swift in Sources */,
+				A9D4671F27F629FE009DCF5B /* Query_data.swift in Sources */,
 				A9D4671627F4AB72009DCF5B /* Attributes.swift in Sources */,
+				A9D4671D27F629D9009DCF5B /* Content.swift in Sources */,
 				A9F024A027F24FEA00B7A4AB /* ProductDetailViewController.swift in Sources */,
 				A9F0246527F22D7800B7A4AB /* AppDelegate.swift in Sources */,
 				A9D4671227F403B7009DCF5B /* Service.swift in Sources */,
+				A9D4671B27F629A8009DCF5B /* BestSellersCategory.swift in Sources */,
 				A9F0246727F22D7800B7A4AB /* SceneDelegate.swift in Sources */,
 				A9D4671927F4ACA2009DCF5B /* CategoryViewModel.swift in Sources */,
 				A9D4671427F403FA009DCF5B /* Category.swift in Sources */,

@@ -1,12 +1,10 @@
 import UIKit
 
-class SearchScreenViewController: UIViewController, UITableViewDelegate {
+class SearchScreenViewController: UIViewController, UITableViewDelegate, UISearchBarDelegate {
     
     // MARK: Call to view model of Category
     var viewModelCategory = CategoryViewModel()
     
-    
-    var enteredCategory: String = "lavadora"
 
     @IBOutlet weak var customTableView: UITableView!
     @IBOutlet weak var customSearch: UISearchBar! {
@@ -15,28 +13,34 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate {
         }
     }
     
+    @IBOutlet weak var labelPrueba: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         customTableView.delegate = self
         customTableView.dataSource = self
         customTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
         
+        customSearch.delegate = self
+        
         // Close keyboard by touching anywhere
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
-        
-//        //prueba de conexion
-//        viewModelCategory.getCategoryData(categorySearch: enteredCategory, completion: Void)
-//
-//
-        viewModelCategory.getCategoryData(categorySearch: enteredCategory) { [self] category in
-
-        }
-        
-        
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if let text = searchBar.text {
+            let search = text.trimmingCharacters(in: .whitespaces)
+            _ = search
+            viewModelCategory.getCategoryData(categorySearch: search.lowercased()) { [self] category in
+                self.labelPrueba.text = category.category_id
+                let enteredCategory = category.category_id
+                print(enteredCategory)
+            }
+        }
+
+    }
 }
 
 extension SearchScreenViewController {
@@ -56,16 +60,4 @@ extension SearchScreenViewController: UITableViewDataSource {
         let cell = customTableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath)
                 return cell
     }
-    
-    
 }
-
-//extension SearchScreenViewController: UISearchResultsUpdating {
-//    func updateSearchResults(for searchController: UISearchController) {
-//
-//    }
-//
-//  func updateSearchResultsForSearchController(searchController: UISearchController) {
-//    filterContentForSearchText(searchController.searchBar.text!)
-//  }
-//}
