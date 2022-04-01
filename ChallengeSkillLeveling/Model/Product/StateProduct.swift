@@ -1,5 +1,5 @@
 import Foundation
 
-struct State : Codable {
+struct StateProduct : Codable {
     let name : String?
 }

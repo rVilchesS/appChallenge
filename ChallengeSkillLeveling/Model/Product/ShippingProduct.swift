@@ -1,6 +1,6 @@
 import Foundation
 
-struct Shipping : Codable {
+struct ShippingProduct : Codable {
     let mode : String?
     let tags : [String]?
     let free_shipping : Bool?

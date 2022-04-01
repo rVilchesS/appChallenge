@@ -1,6 +1,6 @@
 import Foundation
 
-struct Min : Codable {
+struct MaxProduct : Codable {
     let price : Int?
     let currency_id : String?
 }

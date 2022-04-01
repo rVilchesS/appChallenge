@@ -1,6 +1,6 @@
 import Foundation
 
-struct ShortDescription : Codable {
+struct ShortDescriptionProduct : Codable {
     let type : String?
     let content : String?
 }

@@ -1,6 +1,5 @@
 import Foundation
-
-struct ValueStruct : Codable {
+struct StructItem : Codable {
     let number : Int?
     let unit : String?
 }

@@ -1,10 +1,9 @@
 import Foundation
-
-struct AttributesProduct : Codable {
+struct SaleTermsItem : Codable {
     let id : String?
     let name : String?
     let value_id : String?
     let value_name : String?
-    let values : [ValuesProduct]?
-    let meta : MetaProduct?
+    let value_struct : ValueStructItem?
+    let values : [ValuesItem]?
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-struct AttributesPickers : Codable {
+struct AttributesPickersProduct : Codable {
     let attribute_id : String?
     let template : String?
 }

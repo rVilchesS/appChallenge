@@ -1,7 +1,5 @@
 import Foundation
-
-struct Values : Codable {
+struct StateItem : Codable {
     let id : String?
     let name : String?
-    let meta : Meta?
 }

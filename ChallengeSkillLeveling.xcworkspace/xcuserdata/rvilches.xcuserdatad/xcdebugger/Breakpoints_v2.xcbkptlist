@@ -23,15 +23,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4DBB8487-F548-4EF7-A39B-FD403ADAEB02"
+            uuid = "5490AF15-6647-47EA-904E-15026392F0F4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChallengeSkillLeveling/Controller/SearchScreenViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "searchBar(_:textDidChange:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -39,17 +39,97 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "45E54C38-B5DB-48C2-ACFD-20A0B5E38E90"
+            uuid = "B4F01ED0-03CA-46DE-9CE8-69F6C5DC0AF4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ChallengeSkillLeveling/ViewModel/BestSellersViewModel.swift"
+            filePath = "ChallengeSkillLeveling/ViewModel/ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "getTopProducts(bestSellerProducts:completion:)"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "getItems(bestSellerProducts:completion:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "070DB91E-4AE1-4451-B6F2-7AEA754E85FB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ChallengeSkillLeveling/ViewModel/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "getItems(bestSellerProducts:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "007F6128-3C79-450F-B216-00CC01A9319E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ChallengeSkillLeveling/ViewModel/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "getItems(bestSellerProducts:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5285ACFF-92A1-4173-9D59-C6A375E6E6FB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ChallengeSkillLeveling/ViewModel/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "getItems(bestSellerProducts:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5285ACFF-92A1-4173-9D59-C6A375E6E6FB - 20e0b850b1c8c230"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in ChallengeSkillLeveling.ViewModel.getItems(bestSellerProducts: ChallengeSkillLeveling.BestSellersCategory, completion: (ChallengeSkillLeveling.ItemDetail) -&gt; ()) -&gt; ()"
+                  moduleName = "ChallengeSkillLeveling"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rvilches/Desktop/ChallengeSkillLeveling/ChallengeSkillLeveling/ViewModel/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "150"
+                  endingLineNumber = "150"
+                  offsetFromSymbolStart = "316">
+               </Location>
+               <Location
+                  uuid = "5285ACFF-92A1-4173-9D59-C6A375E6E6FB - 20e0b850b1c8c230"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in ChallengeSkillLeveling.ViewModel.getItems(bestSellerProducts: ChallengeSkillLeveling.BestSellersCategory, completion: (ChallengeSkillLeveling.ItemDetail) -&gt; ()) -&gt; ()"
+                  moduleName = "ChallengeSkillLeveling"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rvilches/Desktop/ChallengeSkillLeveling/ChallengeSkillLeveling/ViewModel/ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "150"
+                  endingLineNumber = "150"
+                  offsetFromSymbolStart = "360">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -1,6 +1,6 @@
 import Foundation
 
-struct Pictures : Codable {
+struct PicturesProduct : Codable {
     let id : String?
     let url : String?
     let suggested_for_picker : [String]?

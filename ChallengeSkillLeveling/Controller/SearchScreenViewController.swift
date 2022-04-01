@@ -3,9 +3,7 @@ import UIKit
 class SearchScreenViewController: UIViewController, UITableViewDelegate, UISearchBarDelegate {
     
     // MARK: Call to view model of Category
-    var viewModelCategory = CategoryViewModel()
-    
-    var viewModelBestSellers = BestSellersViewModel()
+    var viewModel = ViewModel()
     
     var enteredCategory = ""
 
@@ -30,7 +28,7 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UISearc
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
-        viewModelBestSellers.vc = self
+        viewModel.vc = self
 //        viewModelBestSellers.getBestSellersData(idCategory: enteredCategory)
         print(enteredCategory)
     }
@@ -39,13 +37,17 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UISearc
         if let text = searchBar.text {
             let search = text.trimmingCharacters(in: .whitespaces)
             _ = search
-            viewModelCategory.getCategoryData(categorySearch: search.lowercased()) { [self] category in
+            viewModel.getCategoryData(categorySearch: search.lowercased()) { [self] category in
                 self.labelPrueba.text = category.category_id
                 enteredCategory = category.category_id
-                viewModelBestSellers.getBestSellersData(idCategory: enteredCategory) { [self] bestSellerCategory in
-                    viewModelBestSellers.getTopProducts(bestSellerProducts: bestSellerCategory) { value in
-                        print(value)
+                viewModel.getBestSellersData(idCategory: enteredCategory) { [self] bestSellerCategory in
+//                    viewModel.getProducts(bestSellerProducts: bestSellerCategory) { value in
+//                        print(value.name)
+//                    }
+                    viewModel.getItems(bestSellerProducts: bestSellerCategory) { ItemDetail in
+                        print(ItemDetail.title)
                     }
+                    
                 }
                 customTableView.reloadData()
             }
@@ -64,13 +66,13 @@ extension SearchScreenViewController {
 
 extension SearchScreenViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModelBestSellers.arrBestSellers.count
+        viewModel.arrBestSellers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = customTableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as? CustomTableViewCell
         
-        let modelCategory = viewModelBestSellers.arrBestSellers[indexPath.row]
+        let modelCategory = viewModel.arrBestSellers[indexPath.row]
 //        cell?.lblProductName.text = "\(modelCategory.[content.id])"
         return cell ?? UITableViewCell()
     }

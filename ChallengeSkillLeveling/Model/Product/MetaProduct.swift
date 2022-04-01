@@ -1,6 +1,6 @@
 import Foundation
 
-struct Meta : Codable {
+struct MetaProduct : Codable {
     let value : Bool?
     let rgb : String?
 }

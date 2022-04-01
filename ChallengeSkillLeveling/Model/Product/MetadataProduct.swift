@@ -1,6 +1,6 @@
 import Foundation
 
-struct Metadata : Codable {
+struct MetadataProduct : Codable {
     let key : String?
     let value : String?
 }
