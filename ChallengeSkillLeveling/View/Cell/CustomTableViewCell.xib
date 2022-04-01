@@ -17,17 +17,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="rW4-RF-yTK">
-                        <rect key="frame" x="10" y="10" width="455" height="159"/>
+                        <rect key="frame" x="10" y="10" width="436" height="159"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5ne-zb-vzG">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                <rect key="frame" x="0.0" y="0.0" width="131" height="131"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="JKa-He-ebJ"/>
-                                    <constraint firstAttribute="width" constant="150" id="fJd-46-RBU"/>
+                                    <constraint firstAttribute="height" constant="131" id="JKa-He-ebJ"/>
+                                    <constraint firstAttribute="width" constant="131" id="fJd-46-RBU"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="top" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XTf-CJ-FLO">
-                                <rect key="frame" x="165" y="10" width="290" height="89"/>
+                                <rect key="frame" x="146" y="10" width="290" height="89"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Nombre Producto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BV9-y1-qPv">
                                         <rect key="frame" x="0.0" y="0.0" width="100.5" height="14.5"/>
@@ -79,6 +79,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblDescription1" destination="ctP-b3-hTZ" id="Tye-d2-ZOg"/>
+                <outlet property="lblDescription2" destination="dZt-FV-eg3" id="gEC-z7-YBu"/>
+                <outlet property="lblPrice" destination="7Ky-gs-QDL" id="A4d-Vj-nrV"/>
+                <outlet property="lblProductName" destination="BV9-y1-qPv" id="XoH-yV-qvH"/>
+                <outlet property="productImageView" destination="5ne-zb-vzG" id="ikJ-aE-0yK"/>
+            </connections>
             <point key="canvasLocation" x="90.579710144927546" y="71.316964285714278"/>
         </tableViewCell>
     </objects>

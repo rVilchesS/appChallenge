@@ -5,6 +5,9 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UISearc
     // MARK: Call to view model of Category
     var viewModelCategory = CategoryViewModel()
     
+    var viewModelBestSellers = BestSellersViewModel()
+    
+    var enteredCategory = ""
 
     @IBOutlet weak var customTableView: UITableView!
     @IBOutlet weak var customSearch: UISearchBar! {
@@ -27,6 +30,9 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UISearc
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
+        viewModelBestSellers.vc = self
+//        viewModelBestSellers.getBestSellersData(idCategory: enteredCategory)
+        print(enteredCategory)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -35,8 +41,13 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UISearc
             _ = search
             viewModelCategory.getCategoryData(categorySearch: search.lowercased()) { [self] category in
                 self.labelPrueba.text = category.category_id
-                let enteredCategory = category.category_id
-                print(enteredCategory)
+                enteredCategory = category.category_id
+                viewModelBestSellers.getBestSellersData(idCategory: enteredCategory) { [self] bestSellerCategory in
+                    viewModelBestSellers.getTopProducts(bestSellerProducts: bestSellerCategory) { value in
+                        print(value)
+                    }
+                }
+                customTableView.reloadData()
             }
         }
 
@@ -53,11 +64,14 @@ extension SearchScreenViewController {
 
 extension SearchScreenViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        viewModelBestSellers.arrBestSellers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = customTableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath)
-                return cell
+        let cell = customTableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as? CustomTableViewCell
+        
+        let modelCategory = viewModelBestSellers.arrBestSellers[indexPath.row]
+//        cell?.lblProductName.text = "\(modelCategory.[content.id])"
+        return cell ?? UITableViewCell()
     }
 }

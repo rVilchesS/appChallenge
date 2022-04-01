@@ -1,9 +1,9 @@
 import Foundation
 
-struct Query_data : Codable {
-    let highlight_type : String?
-    let criteria : String?
-    let id : String?
+struct QueryData : Codable {
+    let highlight_type : String
+    let criteria : String
+    let id : String
 
 //    enum CodingKeys: String, CodingKey {
 //

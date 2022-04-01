@@ -1,8 +1,8 @@
 import Foundation
 
 struct BestSellersCategory : Codable {
-    let query_data : Query_data?
-    let content : [Content]?
+    let query_data : QueryData
+    let content : [Content]
 
 //    enum CodingKeys: String, CodingKey {
 //
