@@ -7,9 +7,9 @@ struct ItemDetail : Codable {
     let seller_id : Int?
     let category_id : String?
     let official_store_id : Int?
-    let price : Int?
-    let base_price : Int?
-    let original_price : Int?    
+    let price : Double?
+    let base_price : Double?
+    let original_price : Double?
     let currency_id : String?
     let initial_quantity : Int?
     let available_quantity : Int?

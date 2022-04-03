@@ -74,6 +74,8 @@
 		A9F024A127F24FEA00B7A4AB /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9F0249F27F24FEA00B7A4AB /* ProductDetailViewController.xib */; };
 		A9F024AA27F27F0800B7A4AB /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F024A827F27F0800B7A4AB /* CustomTableViewCell.swift */; };
 		A9F024AB27F27F0800B7A4AB /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9F024A927F27F0800B7A4AB /* CustomTableViewCell.xib */; };
+		A9FD4B8127F96D1B00AAF5FF /* GenericObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FD4B8027F96D1B00AAF5FF /* GenericObj.swift */; };
+		A9FD4B8327FA51E400AAF5FF /* ItemMultiget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FD4B8227FA51E400AAF5FF /* ItemMultiget.swift */; };
 		AE237EED3C0A5BB39BE01CF9 /* Pods_ChallengeSkillLeveling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C985DFF3A14F5D2796DAE86 /* Pods_ChallengeSkillLeveling.framework */; };
 		D715647B717516E47B574F19 /* Pods_ChallengeSkillLeveling_ChallengeSkillLevelingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E1C337007410560783A594 /* Pods_ChallengeSkillLeveling_ChallengeSkillLevelingUITests.framework */; };
 /* End PBXBuildFile section */
@@ -172,6 +174,8 @@
 		A9F0249F27F24FEA00B7A4AB /* ProductDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailViewController.xib; sourceTree = "<group>"; };
 		A9F024A827F27F0800B7A4AB /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		A9F024A927F27F0800B7A4AB /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		A9FD4B8027F96D1B00AAF5FF /* GenericObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericObj.swift; sourceTree = "<group>"; };
+		A9FD4B8227FA51E400AAF5FF /* ItemMultiget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMultiget.swift; sourceTree = "<group>"; };
 		E8B3E557553750ED5DEDAFB4 /* Pods-ChallengeSkillLeveling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeSkillLeveling.release.xcconfig"; path = "Target Support Files/Pods-ChallengeSkillLeveling/Pods-ChallengeSkillLeveling.release.xcconfig"; sourceTree = "<group>"; };
 		F0D38D2B0815748BDD0E0970 /* Pods_ChallengeSkillLevelingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeSkillLevelingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E1C337007410560783A594 /* Pods_ChallengeSkillLeveling_ChallengeSkillLevelingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeSkillLeveling_ChallengeSkillLevelingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,6 +309,7 @@
 		A9D4676027F7B14C009DCF5B /* Item */ = {
 			isa = PBXGroup;
 			children = (
+				A9FD4B8227FA51E400AAF5FF /* ItemMultiget.swift */,
 				A9D4676127F7B15B009DCF5B /* ItemDetail.swift */,
 				A9D4676327F7B3B5009DCF5B /* SaleTermsItem.swift */,
 				A9D4676527F7B3CB009DCF5B /* ValueStructItem.swift */,
@@ -388,6 +393,7 @@
 		A9F0249927F23B6700B7A4AB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A9FD4B7F27F96D0B00AAF5FF /* GenericObj */,
 				A9D4676027F7B14C009DCF5B /* Item */,
 				A9D4672F27F6B921009DCF5B /* Product */,
 				A9D4672127F62D85009DCF5B /* BestSellers */,
@@ -422,6 +428,14 @@
 				A9F024A927F27F0800B7A4AB /* CustomTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		A9FD4B7F27F96D0B00AAF5FF /* GenericObj */ = {
+			isa = PBXGroup;
+			children = (
+				A9FD4B8027F96D1B00AAF5FF /* GenericObj.swift */,
+			);
+			path = GenericObj;
 			sourceTree = "<group>";
 		};
 		DA0AECFA422B4F2DDF5CDDB7 /* Frameworks */ = {
@@ -690,6 +704,7 @@
 				A9D4677C27F7B4B3009DCF5B /* CountryItem.swift in Sources */,
 				A9D4676827F7B3DF009DCF5B /* ValuesItem.swift in Sources */,
 				A9D4678227F7B511009DCF5B /* AttributesItem.swift in Sources */,
+				A9FD4B8327FA51E400AAF5FF /* ItemMultiget.swift in Sources */,
 				A9D4673727F6BA18009DCF5B /* BuyBoxWinnerProduct.swift in Sources */,
 				A9D4677627F7B475009DCF5B /* LocationItem.swift in Sources */,
 				A9D4674B27F6BB73009DCF5B /* SaleTermsProduct.swift in Sources */,
@@ -705,6 +720,7 @@
 				A9D4675727F6BC16009DCF5B /* StateProduct.swift in Sources */,
 				A9D4671F27F629FE009DCF5B /* QueryData.swift in Sources */,
 				A9D4675B27F78F57009DCF5B /* ValueStructProduct.swift in Sources */,
+				A9FD4B8127F96D1B00AAF5FF /* GenericObj.swift in Sources */,
 				A9D4671627F4AB72009DCF5B /* Attributes.swift in Sources */,
 				A9D4671D27F629D9009DCF5B /* Content.swift in Sources */,
 				A9D4674D27F6BB91009DCF5B /* SellerAddressProduct.swift in Sources */,

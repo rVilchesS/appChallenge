@@ -7,31 +7,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "44FC37D8-0796-40CD-90FE-046342AC14CE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ChallengeSkillLeveling/ViewModel/BestSellersViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "getTopProducts(bestSellerProducts:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5490AF15-6647-47EA-904E-15026392F0F4"
+            uuid = "19904546-7DCB-42DC-A059-656E457D6816"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChallengeSkillLeveling/Controller/SearchScreenViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "searchBar(_:textDidChange:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -39,97 +23,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B4F01ED0-03CA-46DE-9CE8-69F6C5DC0AF4"
+            uuid = "A1DB575E-CFB5-4622-A342-5B218E3FBED5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ChallengeSkillLeveling/ViewModel/ViewModel.swift"
+            filePath = "ChallengeSkillLeveling/Controller/SearchScreenViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "getItems(bestSellerProducts:completion:)"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "searchBar(_:textDidChange:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "070DB91E-4AE1-4451-B6F2-7AEA754E85FB"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ChallengeSkillLeveling/ViewModel/ViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
-            landmarkName = "getItems(bestSellerProducts:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "007F6128-3C79-450F-B216-00CC01A9319E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ChallengeSkillLeveling/ViewModel/ViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
-            landmarkName = "getItems(bestSellerProducts:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5285ACFF-92A1-4173-9D59-C6A375E6E6FB"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ChallengeSkillLeveling/ViewModel/ViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
-            landmarkName = "getItems(bestSellerProducts:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5285ACFF-92A1-4173-9D59-C6A375E6E6FB - 20e0b850b1c8c230"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in ChallengeSkillLeveling.ViewModel.getItems(bestSellerProducts: ChallengeSkillLeveling.BestSellersCategory, completion: (ChallengeSkillLeveling.ItemDetail) -&gt; ()) -&gt; ()"
-                  moduleName = "ChallengeSkillLeveling"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rvilches/Desktop/ChallengeSkillLeveling/ChallengeSkillLeveling/ViewModel/ViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "150"
-                  endingLineNumber = "150"
-                  offsetFromSymbolStart = "316">
-               </Location>
-               <Location
-                  uuid = "5285ACFF-92A1-4173-9D59-C6A375E6E6FB - 20e0b850b1c8c230"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in ChallengeSkillLeveling.ViewModel.getItems(bestSellerProducts: ChallengeSkillLeveling.BestSellersCategory, completion: (ChallengeSkillLeveling.ItemDetail) -&gt; ()) -&gt; ()"
-                  moduleName = "ChallengeSkillLeveling"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rvilches/Desktop/ChallengeSkillLeveling/ChallengeSkillLeveling/ViewModel/ViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "150"
-                  endingLineNumber = "150"
-                  offsetFromSymbolStart = "360">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

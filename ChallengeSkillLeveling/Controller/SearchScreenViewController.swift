@@ -6,6 +6,13 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UISearc
     var viewModel = ViewModel()
     
     var enteredCategory = ""
+    var productMultiget = [String]()
+    var itemMultiget: String = ""
+    var items = [String]()
+    var products = [String]()
+    var genericObj = [GenericObj]()
+    var positionProduct: Int = 0
+    var positionItem: Int = 0
 
     @IBOutlet weak var customTableView: UITableView!
     @IBOutlet weak var customSearch: UISearchBar! {
@@ -13,9 +20,7 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UISearc
             // agregar acá estilos del search bar
         }
     }
-    
-    @IBOutlet weak var labelPrueba: UILabel!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         customTableView.delegate = self
@@ -30,29 +35,55 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UISearc
         
         viewModel.vc = self
 //        viewModelBestSellers.getBestSellersData(idCategory: enteredCategory)
-        print(enteredCategory)
+        
+//        genericObj.append(GenericObj(id: "222", title: "prueba", description: "descrip", moreDescription: "descrip2", position: 1))
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if ((searchBar.text?.isEmpty) != nil) {
+            genericObj = []
+            customTableView.reloadData()
+        }
         if let text = searchBar.text {
             let search = text.trimmingCharacters(in: .whitespaces)
-            _ = search
+            genericObj = []
             viewModel.getCategoryData(categorySearch: search.lowercased()) { [self] category in
-                self.labelPrueba.text = category.category_id
                 enteredCategory = category.category_id
-                viewModel.getBestSellersData(idCategory: enteredCategory) { [self] bestSellerCategory in
-//                    viewModel.getProducts(bestSellerProducts: bestSellerCategory) { value in
-//                        print(value.name)
-//                    }
-                    viewModel.getItems(bestSellerProducts: bestSellerCategory) { ItemDetail in
-                        print(ItemDetail.title)
-                    }
+                                        
+                viewModel.getBestSellersData(idCategory: enteredCategory) { [self] bestSellers in
+                    productMultiget = []
+                    itemMultiget = ""
                     
+                    bestSellers.last?.content.forEach{ idValue in
+                        if idValue.type.contains("PRODUCT") {
+                            productMultiget +=  [idValue.id]
+                            positionProduct = idValue.position
+                        } else if idValue.type.contains("ITEM") {
+                            itemMultiget += idValue.id + ","
+                            positionItem = idValue.position
+                        }
+                    }
+                    print("Productos: \(productMultiget)")
+                    print("Items: \(itemMultiget)")
+                    
+                    genericObj = []
+                    
+                    if itemMultiget.isEmpty {
+                        customTableView.reloadData()
+                    } else {
+                        viewModel.getItems(listItems: itemMultiget) { [self] itemsDetail in
+                            genericObj = []
+                            itemsDetail.forEach { items in
+                                genericObj.append(GenericObj(id: items.body?.id ?? "", title: items.body?.title ?? "", image: items.body?.thumbnail ?? "", price: items.body?.price ?? 0, description: "", moreDescription: ""))
+                            }
+                            
+                            customTableView.reloadData()
+                            
+                        }
+                    }
                 }
-                customTableView.reloadData()
             }
         }
-
     }
 }
 
@@ -66,14 +97,31 @@ extension SearchScreenViewController {
 
 extension SearchScreenViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.arrBestSellers.count
+//        viewModel.arrBestSellers.count
+        genericObj.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if genericObj.isEmpty {
+            return UITableViewCell()
+        }
+//        let cell = customTableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as? CustomTableViewCell
+//
+//        let modelCategory = viewModel.arrBestSellers[indexPath.row]
+////        cell?.lblProductName.text = "\(modelCategory.[content.id])"
+//        return cell ?? UITableViewCell()
+        
         let cell = customTableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as? CustomTableViewCell
         
-        let modelCategory = viewModel.arrBestSellers[indexPath.row]
-//        cell?.lblProductName.text = "\(modelCategory.[content.id])"
+//        guard let item = genericObj[indexPath.row] else {
+//            return UITableViewCell()
+//        }
+//
+        
+        
+        
+        let item = genericObj[indexPath.row]
+        cell?.setup(title: item.title ?? "", url: item.image ?? "")
         return cell ?? UITableViewCell()
     }
 }

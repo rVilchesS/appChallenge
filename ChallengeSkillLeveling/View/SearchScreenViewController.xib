@@ -13,7 +13,6 @@
             <connections>
                 <outlet property="customSearch" destination="EzG-i8-A6b" id="wKh-j8-NIQ"/>
                 <outlet property="customTableView" destination="4Yb-Xz-jT3" id="dCo-t4-sUG"/>
-                <outlet property="labelPrueba" destination="L0E-TN-11z" id="I5y-GK-D09"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Lx-dm-ejB">
-                    <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                    <rect key="frame" x="0.0" y="779" width="414" height="83"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <items>
                         <tabBarItem systemItem="favorites" id="852-go-Gnf"/>
@@ -33,11 +32,28 @@
                         <tabBarItem systemItem="more" id="2gU-bh-eaj"/>
                     </items>
                 </tabBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4Yb-Xz-jT3">
+                    <rect key="frame" x="5" y="108" width="404" height="666"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eeH-7x-OLc">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="64"/>
                     <subviews>
-                        <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="Buscar en Mercado Libre" translatesAutoresizingMaskIntoConstraints="NO" id="EzG-i8-A6b">
-                            <rect key="frame" x="50" y="50" width="314" height="51"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rTf-pV-ot5">
+                            <rect key="frame" x="371" y="28" width="21" height="19"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageReference key="image" image="Icon shape" symbolScale="large" renderingMode="hierarchical">
+                                <hierarchicalColors>
+                                    <color systemColor="labelColor"/>
+                                    <color systemColor="secondaryLabelColor"/>
+                                    <color systemColor="tertiaryLabelColor"/>
+                                </hierarchicalColors>
+                            </imageReference>
+                        </imageView>
+                        <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="prominent" placeholder="Buscar en Mercado Libre" translatesAutoresizingMaskIntoConstraints="NO" id="EzG-i8-A6b">
+                            <rect key="frame" x="103" y="7" width="239" height="51"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="1" green="0.8862745098" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -47,59 +63,32 @@
                                 <string>Title</string>
                             </scopeButtonTitles>
                         </searchBar>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="rTf-pV-ot5">
-                            <rect key="frame" x="364" y="58.5" width="43" height="25"/>
-                            <imageReference key="image" image="cart" catalog="system" symbolScale="large" renderingMode="hierarchical">
-                                <hierarchicalColors>
-                                    <color systemColor="labelColor"/>
-                                    <color systemColor="secondaryLabelColor"/>
-                                    <color systemColor="tertiaryLabelColor"/>
-                                </hierarchicalColors>
-                            </imageReference>
-                        </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0E-TN-11z">
-                            <rect key="frame" x="169" y="101" width="171" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.88627450980392153" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="EzG-i8-A6b" firstAttribute="leading" secondItem="eeH-7x-OLc" secondAttribute="leading" constant="50" id="Q2a-du-W63"/>
-                        <constraint firstAttribute="trailing" secondItem="EzG-i8-A6b" secondAttribute="trailing" constant="50" id="Z6x-Qs-Qw7"/>
-                        <constraint firstAttribute="height" constant="125" id="aGV-Yu-gtj"/>
-                        <constraint firstAttribute="trailing" secondItem="rTf-pV-ot5" secondAttribute="trailing" constant="7" id="gv6-cA-QIg"/>
-                        <constraint firstItem="EzG-i8-A6b" firstAttribute="top" secondItem="eeH-7x-OLc" secondAttribute="top" constant="50" id="i7D-mr-D6N"/>
-                        <constraint firstItem="rTf-pV-ot5" firstAttribute="top" secondItem="eeH-7x-OLc" secondAttribute="top" constant="60" id="kCM-T0-LvD"/>
-                        <constraint firstItem="rTf-pV-ot5" firstAttribute="leading" secondItem="EzG-i8-A6b" secondAttribute="trailing" id="p3g-Lo-pxk"/>
+                        <constraint firstAttribute="height" constant="64" id="FOk-V9-dKV"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4Yb-Xz-jT3">
-                    <rect key="frame" x="5" y="130" width="404" height="678"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="eeH-7x-OLc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1gH-lS-rTq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Yb-Xz-jT3" secondAttribute="trailing" constant="5" id="2ry-rO-sSx"/>
-                <constraint firstItem="4Yb-Xz-jT3" firstAttribute="top" secondItem="eeH-7x-OLc" secondAttribute="bottom" constant="5" id="5zq-9A-dVl"/>
+                <constraint firstItem="eeH-7x-OLc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="5DV-i8-aLl"/>
                 <constraint firstItem="7Lx-dm-ejB" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="APo-Qm-tKd"/>
                 <constraint firstItem="7Lx-dm-ejB" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Ets-qF-wmJ"/>
                 <constraint firstItem="7Lx-dm-ejB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JNB-Ya-Krt"/>
-                <constraint firstItem="eeH-7x-OLc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="YCo-FG-L5r"/>
+                <constraint firstItem="eeH-7x-OLc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="V8u-fr-TQy"/>
                 <constraint firstItem="4Yb-Xz-jT3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="cQC-GX-Bi0"/>
-                <constraint firstItem="eeH-7x-OLc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="clq-BY-FZH"/>
                 <constraint firstItem="7Lx-dm-ejB" firstAttribute="top" secondItem="4Yb-Xz-jT3" secondAttribute="bottom" constant="5" id="ghd-ze-HMe"/>
-                <constraint firstItem="eeH-7x-OLc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rN6-le-pSM"/>
+                <constraint firstItem="4Yb-Xz-jT3" firstAttribute="top" secondItem="eeH-7x-OLc" secondAttribute="bottom" id="oyd-Fe-2u8"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </view>
     </objects>
     <resources>
-        <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="Icon shape" width="11" height="9.5"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

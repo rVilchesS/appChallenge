@@ -6,8 +6,8 @@ class ViewModel {
     let apiClient = AlamofireAPIClient()
     weak var vc: SearchScreenViewController?
     var arrBestSellers = [BestSellersCategory]()
-    var arrProducts = [ProductDetail]()
-    var arrItems = [ItemDetail]()
+    var arrProducts = [[ProductDetail]()]
+    var arrItems = [[ItemDetail]()]
     var arrCategory = [Category]()
     var enteredCategory: String? = ""
     
@@ -40,7 +40,7 @@ class ViewModel {
         }
     }
     
-    func getBestSellersData(idCategory: String? = nil, completion: @escaping (BestSellersCategory) -> Void){
+    func getBestSellersData(idCategory: String? = nil, completion: @escaping ([BestSellersCategory]) -> Void){
         
         var url = "https://api.mercadolibre.com/highlights/MLA/category/"
         
@@ -55,19 +55,16 @@ class ViewModel {
                     if let data = data {
                         let decod = try JSONDecoder().decode(BestSellersCategory.self, from: data)
                         
-//                        for modelBestSellers in decod {
-//                            self.arrBestSellers.append(modelBestSellers)
-//                            completion(modelBestSellers)
-//                        }
+                        
+                        self.arrBestSellers.append(decod)
+//                        print(self.arrBestSellers)
+                        completion(self.arrBestSellers)
 ////                        print(self.arrCategory)
 //                        self.arrBestSellers.append(contentsOf: decod)
 //                        DispatchQueue.main.async {
 //                            self.vc?.customTableView.reloadData()
 //                        }
-                        
-                        
-                        completion(decod)
-                        
+   
                     }
                 } catch let err {
                     print("Error: \(err.localizedDescription) ** Best Sellers")
@@ -79,94 +76,59 @@ class ViewModel {
     }
 
     
-    func getProducts(bestSellerProducts: BestSellersCategory, completion: @escaping (ProductDetail) -> Void){
+    func getProducts(listProducts: [String], completion: @escaping ([ProductDetail]) -> Void){
         
-//        var url = "https://api.mercadolibre.com/items?ids="
-        
-        var url = "https://api.mercadolibre.com/products/MLA17418994"
-        
-//        var idProducts: String = ""
-//
-//        bestSellerProducts.content.forEach { value in
-//            if idProducts == "" {
-//                idProducts = value.id
-//            } else {
-//                idProducts = idProducts + "," + value.id
-//            }
-//        }
-        
-//        url.append(contentsOf: idProducts)
-        
-        apiClient.get(url: url) { response in
-            switch response {
-            case .success(let data):
-                do {
-                    if let data = data {
-                        let decod = try JSONDecoder().decode(ProductDetail.self, from: data)
-                        
-                        
-                        self.arrProducts.append(decod)
-//                        print(self.arrProducts)
+        for product in listProducts {
+            let url = "https://api.mercadolibre.com/products/\(product)"
+            
+            apiClient.get(url: url) { response in
+                switch response {
+                case .success(let data):
+                    do {
+                        if let data = data {
+                            let decod = try JSONDecoder().decode(ProductDetail.self, from: data)
                             
-                        
-////                        print(self.arrCategory)
-//                        self.arrProducts.append(contentsOf: decod)
-//                        DispatchQueue.main.async {
-//                            self.vc?.customTableView.reloadData()
-//                        }
-                        completion(decod)
+                            
+    //                        self.arrProducts.append(decod)
+    //                        print(self.arrProducts)
+                                
+                            
+    ////                        print(self.arrCategory)
+    //                        self.arrProducts.append(contentsOf: decod)
+    //                        DispatchQueue.main.async {
+    //                            self.vc?.customTableView.reloadData()
+    //                        }
+//                            print(decod)
+                            completion([decod])
+                        }
+                    } catch let err {
+                        print("Error: \(err.localizedDescription) ** Product")
                     }
-                } catch let err {
-                    print("Error: \(err.localizedDescription) ** Product")
+                case .failure(let error):
+                    print("Error: \(error) ** Product Failure")
                 }
-            case .failure(let error):
-                print("Error: \(error) ** Product Failure")
             }
         }
+        
     }
     
-    func getItems(bestSellerProducts: BestSellersCategory, completion: @escaping (ItemDetail) -> Void){
-        
-//        var url = "https://api.mercadolibre.com/items?ids="
-        
-        var url = "https://api.mercadolibre.com/items/MLA1103413562"
-        
-//        var idProducts: String = ""
-//
-//        bestSellerProducts.content.forEach { value in
-//            if idProducts == "" {
-//                idProducts = value.id
-//            } else {
-//                idProducts = idProducts + "," + value.id
-//            }
-//        }
-        
-//        url.append(contentsOf: idProducts)
+    func getItems(listItems: String, completion: @escaping ([ItemMultiget]) -> Void){
+            
+        let url = "https://api.mercadolibre.com/items?ids=\(listItems)"
         
         apiClient.get(url: url) { response in
             switch response {
             case .success(let data):
                 do {
                     if let data = data {
-                        let decod = try JSONDecoder().decode(ItemDetail.self, from: data)
-                        
-                        
-                        self.arrItems.append(decod)
-                        print(self.arrItems)
-                            
-                        
-////                        print(self.arrCategory)
-//                        self.arrProducts.append(contentsOf: decod)
-//                        DispatchQueue.main.async {
-//                            self.vc?.customTableView.reloadData()
-//                        }
+                        let decod = try JSONDecoder().decode([ItemMultiget].self, from: data)
                         completion(decod)
                     }
                 } catch let err {
-                    print("Error: \(err.localizedDescription) ** Product")
+                    print("Error: \(err.localizedDescription) ** Item")
                 }
             case .failure(let error):
-                print("Error: \(error) ** Product Failure")
+                print("Error: \(error) ** Item Failure")
             }
         }
     }
