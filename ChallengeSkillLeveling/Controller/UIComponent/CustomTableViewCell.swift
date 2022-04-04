@@ -38,7 +38,7 @@ class CustomTableViewCell: UITableViewCell {
     
     func setup(title: String = "", url: String = "", price: Int = 0, description: String = "", moreDescription: String = "") {
         lblProductName.text = title
-        lblPrice.text = String(price)
+        lblPrice.text = ("$ " + String(price))
         lblDescription1.text = description
         lblDescription2.text = moreDescription
         productImageView.setImage(from: url)

@@ -76,6 +76,13 @@
 		A9F024AB27F27F0800B7A4AB /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9F024A927F27F0800B7A4AB /* CustomTableViewCell.xib */; };
 		A9FD4B8127F96D1B00AAF5FF /* GenericObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FD4B8027F96D1B00AAF5FF /* GenericObj.swift */; };
 		A9FD4B8327FA51E400AAF5FF /* ItemMultiget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FD4B8227FA51E400AAF5FF /* ItemMultiget.swift */; };
+		A9FD4B8727FA6C8E00AAF5FF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FD4B8527FA6C8E00AAF5FF /* TabBarViewController.swift */; };
+		A9FD4B8B27FA71D000AAF5FF /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FD4B8927FA71D000AAF5FF /* FavoritesViewController.swift */; };
+		A9FD4B8C27FA71D000AAF5FF /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9FD4B8A27FA71D000AAF5FF /* FavoritesViewController.xib */; };
+		A9FD4B9127FA73CC00AAF5FF /* MyShopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FD4B8F27FA73CC00AAF5FF /* MyShopsViewController.swift */; };
+		A9FD4B9227FA73CC00AAF5FF /* MyShopsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9FD4B9027FA73CC00AAF5FF /* MyShopsViewController.xib */; };
+		A9FD4B9527FA746800AAF5FF /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FD4B9327FA746800AAF5FF /* NotificationsViewController.swift */; };
+		A9FD4B9627FA746800AAF5FF /* NotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9FD4B9427FA746800AAF5FF /* NotificationsViewController.xib */; };
 		AE237EED3C0A5BB39BE01CF9 /* Pods_ChallengeSkillLeveling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C985DFF3A14F5D2796DAE86 /* Pods_ChallengeSkillLeveling.framework */; };
 		D715647B717516E47B574F19 /* Pods_ChallengeSkillLeveling_ChallengeSkillLevelingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E1C337007410560783A594 /* Pods_ChallengeSkillLeveling_ChallengeSkillLevelingUITests.framework */; };
 /* End PBXBuildFile section */
@@ -176,6 +183,13 @@
 		A9F024A927F27F0800B7A4AB /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		A9FD4B8027F96D1B00AAF5FF /* GenericObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericObj.swift; sourceTree = "<group>"; };
 		A9FD4B8227FA51E400AAF5FF /* ItemMultiget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMultiget.swift; sourceTree = "<group>"; };
+		A9FD4B8527FA6C8E00AAF5FF /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		A9FD4B8927FA71D000AAF5FF /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		A9FD4B8A27FA71D000AAF5FF /* FavoritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
+		A9FD4B8F27FA73CC00AAF5FF /* MyShopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShopsViewController.swift; sourceTree = "<group>"; };
+		A9FD4B9027FA73CC00AAF5FF /* MyShopsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyShopsViewController.xib; sourceTree = "<group>"; };
+		A9FD4B9327FA746800AAF5FF /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		A9FD4B9427FA746800AAF5FF /* NotificationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationsViewController.xib; sourceTree = "<group>"; };
 		E8B3E557553750ED5DEDAFB4 /* Pods-ChallengeSkillLeveling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeSkillLeveling.release.xcconfig"; path = "Target Support Files/Pods-ChallengeSkillLeveling/Pods-ChallengeSkillLeveling.release.xcconfig"; sourceTree = "<group>"; };
 		F0D38D2B0815748BDD0E0970 /* Pods_ChallengeSkillLevelingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeSkillLevelingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E1C337007410560783A594 /* Pods_ChallengeSkillLeveling_ChallengeSkillLevelingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeSkillLeveling_ChallengeSkillLevelingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +285,7 @@
 		A9D4672627F66998009DCF5B /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				A9D4671127F403B7009DCF5B /* Service.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -368,7 +383,6 @@
 				A9F0246627F22D7800B7A4AB /* SceneDelegate.swift */,
 				A9F0246F27F22D7A00B7A4AB /* LaunchScreen.storyboard */,
 				A9F0247227F22D7A00B7A4AB /* Info.plist */,
-				A9D4671127F403B7009DCF5B /* Service.swift */,
 			);
 			path = ChallengeSkillLeveling;
 			sourceTree = "<group>";
@@ -407,6 +421,9 @@
 			children = (
 				A9F0249527F2347E00B7A4AB /* SearchScreenViewController.xib */,
 				A9F0249F27F24FEA00B7A4AB /* ProductDetailViewController.xib */,
+				A9FD4B8A27FA71D000AAF5FF /* FavoritesViewController.xib */,
+				A9FD4B9027FA73CC00AAF5FF /* MyShopsViewController.xib */,
+				A9FD4B9427FA746800AAF5FF /* NotificationsViewController.xib */,
 				A9F024A227F2525F00B7A4AB /* Cell */,
 			);
 			path = View;
@@ -417,6 +434,10 @@
 			children = (
 				A9F0249427F2347E00B7A4AB /* SearchScreenViewController.swift */,
 				A9F0249E27F24FEA00B7A4AB /* ProductDetailViewController.swift */,
+				A9FD4B8927FA71D000AAF5FF /* FavoritesViewController.swift */,
+				A9FD4B8F27FA73CC00AAF5FF /* MyShopsViewController.swift */,
+				A9FD4B9327FA746800AAF5FF /* NotificationsViewController.swift */,
+				A9FD4B8427FA6C7000AAF5FF /* UIComponent */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -424,7 +445,6 @@
 		A9F024A227F2525F00B7A4AB /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				A9F024A827F27F0800B7A4AB /* CustomTableViewCell.swift */,
 				A9F024A927F27F0800B7A4AB /* CustomTableViewCell.xib */,
 			);
 			path = Cell;
@@ -436,6 +456,15 @@
 				A9FD4B8027F96D1B00AAF5FF /* GenericObj.swift */,
 			);
 			path = GenericObj;
+			sourceTree = "<group>";
+		};
+		A9FD4B8427FA6C7000AAF5FF /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				A9FD4B8527FA6C8E00AAF5FF /* TabBarViewController.swift */,
+				A9F024A827F27F0800B7A4AB /* CustomTableViewCell.swift */,
+			);
+			path = UIComponent;
 			sourceTree = "<group>";
 		};
 		DA0AECFA422B4F2DDF5CDDB7 /* Frameworks */ = {
@@ -561,7 +590,10 @@
 				A9D4672D27F69CC0009DCF5B /* ProximaNova-Semibold.ttf in Resources */,
 				A9D4672E27F69CC0009DCF5B /* ProximaNova-Bold.ttf in Resources */,
 				A9F0249727F2347E00B7A4AB /* SearchScreenViewController.xib in Resources */,
+				A9FD4B9227FA73CC00AAF5FF /* MyShopsViewController.xib in Resources */,
+				A9FD4B8C27FA71D000AAF5FF /* FavoritesViewController.xib in Resources */,
 				A9F0247127F22D7A00B7A4AB /* LaunchScreen.storyboard in Resources */,
+				A9FD4B9627FA746800AAF5FF /* NotificationsViewController.xib in Resources */,
 				A9F024AB27F27F0800B7A4AB /* CustomTableViewCell.xib in Resources */,
 				A9F0246E27F22D7A00B7A4AB /* Assets.xcassets in Resources */,
 				A9F024A127F24FEA00B7A4AB /* ProductDetailViewController.xib in Resources */,
@@ -692,6 +724,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9FD4B9127FA73CC00AAF5FF /* MyShopsViewController.swift in Sources */,
 				A9F024AA27F27F0800B7A4AB /* CustomTableViewCell.swift in Sources */,
 				A9D4677E27F7B4C8009DCF5B /* SearchLocationItem.swift in Sources */,
 				A9D4673F27F6BAD0009DCF5B /* MaxProduct.swift in Sources */,
@@ -703,6 +736,7 @@
 				A9F0249627F2347E00B7A4AB /* SearchScreenViewController.swift in Sources */,
 				A9D4677C27F7B4B3009DCF5B /* CountryItem.swift in Sources */,
 				A9D4676827F7B3DF009DCF5B /* ValuesItem.swift in Sources */,
+				A9FD4B9527FA746800AAF5FF /* NotificationsViewController.swift in Sources */,
 				A9D4678227F7B511009DCF5B /* AttributesItem.swift in Sources */,
 				A9FD4B8327FA51E400AAF5FF /* ItemMultiget.swift in Sources */,
 				A9D4673727F6BA18009DCF5B /* BuyBoxWinnerProduct.swift in Sources */,
@@ -710,6 +744,7 @@
 				A9D4674B27F6BB73009DCF5B /* SaleTermsProduct.swift in Sources */,
 				A9D4674927F6BB59009DCF5B /* Products.swift in Sources */,
 				A9D4673527F6B9DD009DCF5B /* BuyBoxWinnerPriceRangeProduct.swift in Sources */,
+				A9FD4B8727FA6C8E00AAF5FF /* TabBarViewController.swift in Sources */,
 				A9D4676C27F7B409009DCF5B /* PicturesItem.swift in Sources */,
 				A9D4677827F7B48E009DCF5B /* CityItem.swift in Sources */,
 				A9D4677427F7B45E009DCF5B /* SellerAddressItem.swift in Sources */,
@@ -718,6 +753,7 @@
 				A9D4673B27F6BA8C009DCF5B /* InstallmentsProduct.swift in Sources */,
 				A9D4674527F6BB16009DCF5B /* PickersProduct.swift in Sources */,
 				A9D4675727F6BC16009DCF5B /* StateProduct.swift in Sources */,
+				A9FD4B8B27FA71D000AAF5FF /* FavoritesViewController.swift in Sources */,
 				A9D4671F27F629FE009DCF5B /* QueryData.swift in Sources */,
 				A9D4675B27F78F57009DCF5B /* ValueStructProduct.swift in Sources */,
 				A9FD4B8127F96D1B00AAF5FF /* GenericObj.swift in Sources */,

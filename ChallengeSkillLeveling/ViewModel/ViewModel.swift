@@ -54,17 +54,8 @@ class ViewModel {
                 do {
                     if let data = data {
                         let decod = try JSONDecoder().decode(BestSellersCategory.self, from: data)
-                        
-                        
                         self.arrBestSellers.append(decod)
-//                        print(self.arrBestSellers)
                         completion(self.arrBestSellers)
-////                        print(self.arrCategory)
-//                        self.arrBestSellers.append(contentsOf: decod)
-//                        DispatchQueue.main.async {
-//                            self.vc?.customTableView.reloadData()
-//                        }
-   
                     }
                 } catch let err {
                     print("Error: \(err.localizedDescription) ** Best Sellers")
@@ -75,43 +66,6 @@ class ViewModel {
         }
     }
 
-    
-    func getProducts(listProducts: [String], completion: @escaping ([ProductDetail]) -> Void){
-        
-        for product in listProducts {
-            let url = "https://api.mercadolibre.com/products/\(product)"
-            
-            apiClient.get(url: url) { response in
-                switch response {
-                case .success(let data):
-                    do {
-                        if let data = data {
-                            let decod = try JSONDecoder().decode(ProductDetail.self, from: data)
-                            
-                            
-    //                        self.arrProducts.append(decod)
-    //                        print(self.arrProducts)
-                                
-                            
-    ////                        print(self.arrCategory)
-    //                        self.arrProducts.append(contentsOf: decod)
-    //                        DispatchQueue.main.async {
-    //                            self.vc?.customTableView.reloadData()
-    //                        }
-//                            print(decod)
-                            completion([decod])
-                        }
-                    } catch let err {
-                        print("Error: \(err.localizedDescription) ** Product")
-                    }
-                case .failure(let error):
-                    print("Error: \(error) ** Product Failure")
-                }
-            }
-        }
-        
-    }
-    
     func getItems(listItems: String, completion: @escaping ([ItemMultiget]) -> Void){
             
         let url = "https://api.mercadolibre.com/items?ids=\(listItems)"
@@ -131,6 +85,30 @@ class ViewModel {
                 print("Error: \(error) ** Item Failure")
             }
         }
+    }
+    
+    func getProducts(listProducts: [String], completion: @escaping ([ProductDetail]) -> Void){
+        
+        for product in listProducts {
+            let url = "https://api.mercadolibre.com/products/\(product)"
+            
+            apiClient.get(url: url) { response in
+                switch response {
+                case .success(let data):
+                    do {
+                        if let data = data {
+                            let decod = try JSONDecoder().decode(ProductDetail.self, from: data)
+                            completion([decod])
+                        }
+                    } catch let err {
+                        print("Error: \(err.localizedDescription) ** Product")
+                    }
+                case .failure(let error):
+                    print("Error: \(error) ** Product Failure")
+                }
+            }
+        }
+        
     }
 }
 

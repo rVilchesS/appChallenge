@@ -10,7 +10,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // MARK: Initial View Controller
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = SearchScreenViewController()
+        window.rootViewController = TabBarViewController()
         window.makeKeyAndVisible()
         self.window = window
     }

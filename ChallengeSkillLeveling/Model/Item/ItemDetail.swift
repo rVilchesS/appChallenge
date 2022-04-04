@@ -35,7 +35,7 @@ struct ItemDetail : Codable {
     let seller_contact : String?
     let location : LocationItem?
     let coverage_areas : [String]?
-//    let attributes : [AttributesItem]?
+    let attributes : [AttributesItem]?
     let warnings : [String]?
     let listing_source : String?
     let variations : [VariationsItem]?

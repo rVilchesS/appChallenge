@@ -6,4 +6,6 @@ struct AttributeCombinationsItem : Codable {
     let value_name : String?
     let value_struct : String?
     let values : [ValuesItem]?
+    let attribute_group_id : String?
+    let attribute_group_name : String?
 }

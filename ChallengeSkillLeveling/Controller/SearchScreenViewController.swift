@@ -5,22 +5,23 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UISearc
     // MARK: Call to view model of Category
     var viewModel = ViewModel()
     
+    // MARK: Attributes
     var enteredCategory = ""
     var productMultiget = [String]()
     var itemMultiget: String = ""
-    var items = [String]()
-    var products = [String]()
     var genericObj = [GenericObj]()
     var positionProduct: Int = 0
     var positionItem: Int = 0
 
+    // MARK: Outlets
     @IBOutlet weak var customTableView: UITableView!
     @IBOutlet weak var customSearch: UISearchBar! {
         didSet{
             // agregar acá estilos del search bar
         }
     }
-        
+    
+    // MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         customTableView.delegate = self
@@ -34,11 +35,9 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UISearc
         view.addGestureRecognizer(tap)
         
         viewModel.vc = self
-//        viewModelBestSellers.getBestSellersData(idCategory: enteredCategory)
-        
-//        genericObj.append(GenericObj(id: "222", title: "prueba", description: "descrip", moreDescription: "descrip2", position: 1))
     }
     
+    // MARK: Function SearchBar
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if ((searchBar.text?.isEmpty) != nil) {
             genericObj = []
@@ -74,7 +73,7 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UISearc
                         viewModel.getItems(listItems: itemMultiget) { [self] itemsDetail in
                             genericObj = []
                             itemsDetail.forEach { items in
-                                genericObj.append(GenericObj(id: items.body?.id ?? "", title: items.body?.title ?? "", image: items.body?.thumbnail ?? "", price: items.body?.price ?? 0, description: "", moreDescription: ""))
+                                genericObj.append(GenericObj(id: items.body?.id ?? "", title: items.body?.title ?? "", image: items.body?.thumbnail ?? "", price: items.body?.price ?? 0, description: items.body?.subtitle ?? "" , moreDescription: items.body?.warranty ?? ""))
                             }
                             
                             customTableView.reloadData()
@@ -97,7 +96,6 @@ extension SearchScreenViewController {
 
 extension SearchScreenViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        viewModel.arrBestSellers.count
         genericObj.count
     }
     
@@ -105,23 +103,11 @@ extension SearchScreenViewController: UITableViewDataSource {
         if genericObj.isEmpty {
             return UITableViewCell()
         }
-//        let cell = customTableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as? CustomTableViewCell
-//
-//        let modelCategory = viewModel.arrBestSellers[indexPath.row]
-////        cell?.lblProductName.text = "\(modelCategory.[content.id])"
-//        return cell ?? UITableViewCell()
-        
+
         let cell = customTableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as? CustomTableViewCell
         
-//        guard let item = genericObj[indexPath.row] else {
-//            return UITableViewCell()
-//        }
-//
-        
-        
-        
         let item = genericObj[indexPath.row]
-        cell?.setup(title: item.title ?? "", url: item.image ?? "")
+        cell?.setup(title: item.title ?? "", url: item.image ?? "", price: Int(item.price ?? 0), description: item.description ?? "", moreDescription: item.moreDescription ?? "")
         return cell ?? UITableViewCell()
     }
 }
