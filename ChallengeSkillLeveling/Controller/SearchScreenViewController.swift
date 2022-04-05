@@ -1,6 +1,6 @@
 import UIKit
 
-class SearchScreenViewController: UIViewController, UITableViewDelegate, UISearchBarDelegate {
+class SearchScreenViewController: UIViewController, UISearchBarDelegate {
     
     // MARK: Call to view model of Category
     var viewModel = ViewModel()
@@ -15,10 +15,18 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UISearc
 
     // MARK: Outlets
     @IBOutlet weak var customTableView: UITableView!
-    @IBOutlet weak var customSearch: UISearchBar! {
-        didSet{
-            // agregar acá estilos del search bar
-        }
+    @IBOutlet weak var customSearch: UISearchBar! 
+
+    
+    // MARK: Hide NavBar
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     // MARK: ViewDidLoad
@@ -35,11 +43,17 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UISearc
         view.addGestureRecognizer(tap)
         
         viewModel.vc = self
+        
+        // changes the color for searchBar
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = .white
+        navigationController?.navigationBar.backgroundColor = hexStringToUIColor(hex: "#FDDD11")
+        view.backgroundColor = hexStringToUIColor(hex: "#FDDD11")
     }
     
-    // MARK: Function SearchBar
+    // MARK: Function SearchBar to reuqest viewModel
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if ((searchBar.text?.isEmpty) != nil) {
+        
+        if (searchBar.text?.isEmpty != nil) {
             genericObj = []
             customTableView.reloadData()
         }
@@ -73,11 +87,9 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UISearc
                         viewModel.getItems(listItems: itemMultiget) { [self] itemsDetail in
                             genericObj = []
                             itemsDetail.forEach { items in
-                                genericObj.append(GenericObj(id: items.body?.id ?? "", title: items.body?.title ?? "", image: items.body?.thumbnail ?? "", price: items.body?.price ?? 0, description: items.body?.subtitle ?? "" , moreDescription: items.body?.warranty ?? ""))
+                                genericObj.append(GenericObj(id: items.body?.id ?? "", title: items.body?.title ?? "", image: items.body?.thumbnail ?? "", detailImage: items.body?.pictures?[0].url ?? "", price: items.body?.price ?? 0, description: items.body?.subtitle ?? "" , moreDescription: items.body?.warranty ?? ""))
                             }
-                            
                             customTableView.reloadData()
-                            
                         }
                     }
                 }
@@ -86,6 +98,7 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UISearc
     }
 }
 
+// MARK: Extension for aditionals functions
 extension SearchScreenViewController {
     // function to close keyboard by touching anywhere
     @objc func dismissKeyboard() {
@@ -93,7 +106,7 @@ extension SearchScreenViewController {
     }
 }
 
-
+// MARK: Extension UITableViewDataSource
 extension SearchScreenViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         genericObj.count
@@ -109,5 +122,22 @@ extension SearchScreenViewController: UITableViewDataSource {
         let item = genericObj[indexPath.row]
         cell?.setup(title: item.title ?? "", url: item.image ?? "", price: Int(item.price ?? 0), description: item.description ?? "", moreDescription: item.moreDescription ?? "")
         return cell ?? UITableViewCell()
+    }
+}
+
+// MARK: Extension UITableViewDelegate
+extension SearchScreenViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        
+        customTableView.deselectRow(at: indexPath, animated: true)
+
+        let detailItem = ProductDetailViewController(nibName: "ProductDetailViewController", bundle: nil)
+        self.navigationController?.pushViewController(detailItem, animated: true)
+        detailItem.idItem = (genericObj[indexPath.row].id) ?? ""
+        detailItem.titleItem = (genericObj[indexPath.row].title)?.capitalized ?? ""
+        detailItem.subTitleItem = (genericObj[indexPath.row].title)?.capitalized ?? ""
+        detailItem.urlImage = (genericObj[indexPath.row].detailImage) ?? ""
+        detailItem.priceItem = Int((genericObj[indexPath.row].price) ?? 0)
     }
 }

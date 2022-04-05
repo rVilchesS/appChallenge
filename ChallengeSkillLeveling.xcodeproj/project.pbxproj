@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1315DF2984B311F728CFB9DF /* Pods_ChallengeSkillLevelingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D38D2B0815748BDD0E0970 /* Pods_ChallengeSkillLevelingTests.framework */; };
+		A968B04E27FB7B7F0012A820 /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968B04D27FB7B7F0012A820 /* FavoritesList.swift */; };
 		A9D4671227F403B7009DCF5B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4671127F403B7009DCF5B /* Service.swift */; };
 		A9D4671427F403FA009DCF5B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4671327F403FA009DCF5B /* Category.swift */; };
 		A9D4671627F4AB72009DCF5B /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4671527F4AB72009DCF5B /* Attributes.swift */; };
@@ -111,6 +112,7 @@
 		29C0CB9CB47CBAB96A54BFD1 /* Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests/Pods-ChallengeSkillLeveling-ChallengeSkillLevelingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		34AB2E44BC9213799EDC1CE7 /* Pods-ChallengeSkillLevelingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeSkillLevelingTests.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeSkillLevelingTests/Pods-ChallengeSkillLevelingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4904E5C1FEF9DEDE20FC3A2B /* Pods-ChallengeSkillLeveling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeSkillLeveling.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeSkillLeveling/Pods-ChallengeSkillLeveling.debug.xcconfig"; sourceTree = "<group>"; };
+		A968B04D27FB7B7F0012A820 /* FavoritesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesList.swift; sourceTree = "<group>"; };
 		A9D4671127F403B7009DCF5B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		A9D4671327F403FA009DCF5B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A9D4671527F4AB72009DCF5B /* Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
@@ -234,6 +236,14 @@
 				0155F861672F45E462A19177 /* Pods-ChallengeSkillLevelingTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A968B04C27FB7B610012A820 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				A968B04D27FB7B7F0012A820 /* FavoritesList.swift */,
+			);
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 		A9D4671727F4AC96009DCF5B /* ViewModel */ = {
@@ -407,6 +417,7 @@
 		A9F0249927F23B6700B7A4AB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A968B04C27FB7B610012A820 /* Favorites */,
 				A9FD4B7F27F96D0B00AAF5FF /* GenericObj */,
 				A9D4676027F7B14C009DCF5B /* Item */,
 				A9D4672F27F6B921009DCF5B /* Product */,
@@ -757,6 +768,7 @@
 				A9D4671F27F629FE009DCF5B /* QueryData.swift in Sources */,
 				A9D4675B27F78F57009DCF5B /* ValueStructProduct.swift in Sources */,
 				A9FD4B8127F96D1B00AAF5FF /* GenericObj.swift in Sources */,
+				A968B04E27FB7B7F0012A820 /* FavoritesList.swift in Sources */,
 				A9D4671627F4AB72009DCF5B /* Attributes.swift in Sources */,
 				A9D4671D27F629D9009DCF5B /* Content.swift in Sources */,
 				A9D4674D27F6BB91009DCF5B /* SellerAddressProduct.swift in Sources */,

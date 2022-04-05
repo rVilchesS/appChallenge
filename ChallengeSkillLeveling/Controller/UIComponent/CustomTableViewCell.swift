@@ -4,6 +4,7 @@ class CustomTableViewCell: UITableViewCell {
 
     var isActive: Bool = false
     
+    // MARK: Outlets
     @IBOutlet weak var productImageView: UIImageView! {
         didSet {
             productImageView.layer.cornerRadius = 4
@@ -29,13 +30,13 @@ class CustomTableViewCell: UITableViewCell {
             lblDescription2.font = UIFont.init(name: "ProximaNova-Regular", size: 11)
         }
     }
-    
     @IBOutlet weak var favButton: UIButton! {
         didSet {
             favButton.layer.opacity = 0.95
         }
     }
     
+    // MARK: Set data for item details to show
     func setup(title: String = "", url: String = "", price: Int = 0, description: String = "", moreDescription: String = "") {
         lblProductName.text = title
         lblPrice.text = ("$ " + String(price))
@@ -46,17 +47,15 @@ class CustomTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
         
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: true)
-        // Configure the view for the selected state
+        super.setSelected(selected, animated: false)
+        
     }
     
-    
+    // MARK: Action for favorite button
     @IBAction func favButtonAction(_ sender: Any) {
         if isActive {
             isActive = false
@@ -69,11 +68,11 @@ class CustomTableViewCell: UITableViewCell {
     
 }
 
+// MARK: Aditional func for used url images
 extension UIImageView {
     func setImage(from url: String) {
         guard let imageURL = URL(string: url) else { return }
-
-            // just not to cause a deadlock in UI!
+        
         DispatchQueue.global().async {
             guard let imageData = try? Data(contentsOf: imageURL) else { return }
 

@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,70 +21,60 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4Yb-Xz-jT3">
-                    <rect key="frame" x="5" y="108" width="404" height="754"/>
+                    <rect key="frame" x="0.0" y="113" width="414" height="749"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eeH-7x-OLc">
-                    <rect key="frame" x="0.0" y="44" width="414" height="64"/>
-                    <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rTf-pV-ot5">
-                            <rect key="frame" x="371" y="28" width="21" height="19"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <imageReference key="image" image="Icon shape" symbolScale="large" renderingMode="hierarchical">
-                                <hierarchicalColors>
-                                    <color systemColor="labelColor"/>
-                                    <color systemColor="secondaryLabelColor"/>
-                                    <color systemColor="tertiaryLabelColor"/>
-                                </hierarchicalColors>
-                            </imageReference>
-                        </imageView>
-                        <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="prominent" placeholder="Buscar en Mercado Libre" translatesAutoresizingMaskIntoConstraints="NO" id="EzG-i8-A6b">
-                            <rect key="frame" x="103" y="7" width="239" height="51"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="1" green="0.8862745098" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <scopeButtonTitles>
-                                <string>Title</string>
-                                <string>Title</string>
-                            </scopeButtonTitles>
-                        </searchBar>
-                    </subviews>
-                    <color key="backgroundColor" red="1" green="0.88627450980392153" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="Buscar en Mercado Libre" backgroundImage="fondo" translatesAutoresizingMaskIntoConstraints="NO" id="EzG-i8-A6b">
+                    <rect key="frame" x="56.5" y="62" width="301" height="51"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="64" id="FOk-V9-dKV"/>
+                        <constraint firstAttribute="width" constant="301" id="A3S-Jh-dQU"/>
                     </constraints>
-                </view>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <scopeButtonTitles>
+                        <string>Title</string>
+                        <string>Title</string>
+                    </scopeButtonTitles>
+                </searchBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gC-Rl-YOY">
+                    <rect key="frame" x="4.5" y="70.5" width="46" height="34"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="Icon Back" title="">
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="default" weight="semibold"/>
+                    </buttonConfiguration>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRP-lA-Xku">
+                    <rect key="frame" x="363" y="71" width="46" height="33"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="Icon shape" title=""/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="eeH-7x-OLc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1gH-lS-rTq"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Yb-Xz-jT3" secondAttribute="trailing" constant="5" id="2ry-rO-sSx"/>
-                <constraint firstItem="eeH-7x-OLc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="5DV-i8-aLl"/>
-                <constraint firstItem="eeH-7x-OLc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="V8u-fr-TQy"/>
-                <constraint firstItem="4Yb-Xz-jT3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="cQC-GX-Bi0"/>
+                <constraint firstItem="sRP-lA-Xku" firstAttribute="centerY" secondItem="EzG-i8-A6b" secondAttribute="centerY" id="0Qe-ts-t7o"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Yb-Xz-jT3" secondAttribute="trailing" id="2ry-rO-sSx"/>
+                <constraint firstItem="EzG-i8-A6b" firstAttribute="centerX" secondItem="4Yb-Xz-jT3" secondAttribute="centerX" id="4Lw-S7-qX8"/>
+                <constraint firstItem="EzG-i8-A6b" firstAttribute="leading" secondItem="1gC-Rl-YOY" secondAttribute="trailing" constant="6" id="AIC-Ob-EWs"/>
+                <constraint firstItem="4Yb-Xz-jT3" firstAttribute="top" secondItem="EzG-i8-A6b" secondAttribute="bottom" id="DJr-n3-iuP"/>
+                <constraint firstItem="4Yb-Xz-jT3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cQC-GX-Bi0"/>
                 <constraint firstItem="4Yb-Xz-jT3" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="ea3-44-3Ww"/>
-                <constraint firstItem="4Yb-Xz-jT3" firstAttribute="top" secondItem="eeH-7x-OLc" secondAttribute="bottom" id="oyd-Fe-2u8"/>
+                <constraint firstItem="EzG-i8-A6b" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="18" id="j0W-af-hYo"/>
+                <constraint firstItem="1gC-Rl-YOY" firstAttribute="centerY" secondItem="EzG-i8-A6b" secondAttribute="centerY" id="kVK-Rj-EAG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sRP-lA-Xku" secondAttribute="trailing" constant="5" id="oaY-IF-eSc"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </view>
     </objects>
     <resources>
+        <image name="Icon Back" width="22" height="20"/>
         <image name="Icon shape" width="22" height="19"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="fondo" width="750" height="72"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
