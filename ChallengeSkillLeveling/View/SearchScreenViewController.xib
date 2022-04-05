@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchScreenViewController" customModule="ChallengeSkillLeveling" customModuleProvider="target">
+            <connections>
+                <outlet property="customSearch" destination="EzG-i8-A6b" id="wKh-j8-NIQ"/>
+                <outlet property="customTableView" destination="4Yb-Xz-jT3" id="dCo-t4-sUG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4Yb-Xz-jT3">
+                    <rect key="frame" x="0.0" y="113" width="414" height="749"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </tableView>
+                <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="Buscar en Mercado Libre" backgroundImage="fondo" translatesAutoresizingMaskIntoConstraints="NO" id="EzG-i8-A6b">
+                    <rect key="frame" x="56.5" y="62" width="301" height="51"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="301" id="A3S-Jh-dQU"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <scopeButtonTitles>
+                        <string>Title</string>
+                        <string>Title</string>
+                    </scopeButtonTitles>
+                </searchBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gC-Rl-YOY">
+                    <rect key="frame" x="4.5" y="70.5" width="46" height="34"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="Icon Back" title="">
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="default" weight="semibold"/>
+                    </buttonConfiguration>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRP-lA-Xku">
+                    <rect key="frame" x="363" y="71" width="46" height="33"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="Icon shape" title=""/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="sRP-lA-Xku" firstAttribute="centerY" secondItem="EzG-i8-A6b" secondAttribute="centerY" id="0Qe-ts-t7o"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Yb-Xz-jT3" secondAttribute="trailing" id="2ry-rO-sSx"/>
+                <constraint firstItem="EzG-i8-A6b" firstAttribute="centerX" secondItem="4Yb-Xz-jT3" secondAttribute="centerX" id="4Lw-S7-qX8"/>
+                <constraint firstItem="EzG-i8-A6b" firstAttribute="leading" secondItem="1gC-Rl-YOY" secondAttribute="trailing" constant="6" id="AIC-Ob-EWs"/>
+                <constraint firstItem="4Yb-Xz-jT3" firstAttribute="top" secondItem="EzG-i8-A6b" secondAttribute="bottom" id="DJr-n3-iuP"/>
+                <constraint firstItem="4Yb-Xz-jT3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cQC-GX-Bi0"/>
+                <constraint firstItem="4Yb-Xz-jT3" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="ea3-44-3Ww"/>
+                <constraint firstItem="EzG-i8-A6b" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="18" id="j0W-af-hYo"/>
+                <constraint firstItem="1gC-Rl-YOY" firstAttribute="centerY" secondItem="EzG-i8-A6b" secondAttribute="centerY" id="kVK-Rj-EAG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sRP-lA-Xku" secondAttribute="trailing" constant="5" id="oaY-IF-eSc"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Icon Back" width="22" height="20"/>
+        <image name="Icon shape" width="22" height="19"/>
+        <image name="fondo" width="750" height="72"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
